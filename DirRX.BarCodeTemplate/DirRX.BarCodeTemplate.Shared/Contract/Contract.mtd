@@ -1,0 +1,113 @@
+{
+  "$type": "Sungero.Metadata.DocumentMetadata, Sungero.Content.Shared",
+  "NameGuid": "b8daa59a-882e-4338-99c0-0508cce74f6b",
+  "Name": "Contract",
+  "AccessRightsMode": "Both",
+  "Actions": [
+    {
+      "NameGuid": "8a0bb543-c6b0-4cb8-9aa4-7e51b407a7dc",
+      "Name": "AddBarCode",
+      "ActionArea": "Card",
+      "GenerateHandler": true,
+      "LargeIconName": "Action_AddBarCode_large_8a0bb543c6b04cb89aa47e51b407a7dc.png",
+      "SmallIconName": "Action_AddBarCode_small_8a0bb543c6b04cb89aa47e51b407a7dc.png"
+    }
+  ],
+  "BaseGuid": "f37c7e63-b134-4446-9b5b-f8811f6c9666",
+  "CanBeNavigationPropertyType": true,
+  "CreationAreaMetadata": {
+    "NameGuid": "a6e37369-efee-41d3-a331-abc1c6ce6823",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true,
+    "Versions": []
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "80d3ce1a-9a72-443a-8b6c-6c6eef0c8d0f",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true,
+    "Versions": []
+  },
+  "IconResourcesKeys": [],
+  "LayeredFromGuid": "f37c7e63-b134-4446-9b5b-f8811f6c9666",
+  "OpenCardByDefaultInCollection": true,
+  "OperationsClass": "",
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "56cbe741-880f-4e6f-9567-343d08494b59",
+      "Name": "Versions",
+      "EntityGuid": "fff83ba5-5a74-415e-bdb1-8eeac95c07d2",
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "EntityGuid"
+      ],
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "15280407-331e-42f6-b263-041a495b66cd",
+      "Name": "Tracking",
+      "EntityGuid": "75083ac6-3fbd-46d4-aea1-0a6bd4c5d161",
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "EntityGuid"
+      ],
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "165c49b7-54cb-42d5-8254-c03460fdcb9b",
+      "Name": "Milestones",
+      "EntityGuid": "bd61c173-6cc9-4c48-a428-1848a5fd81a6",
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "EntityGuid"
+      ],
+      "Versions": []
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "39d762d4-b27f-4c5b-aeaa-c41a06c4355e",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [
+      {
+        "$type": "Sungero.Metadata.RibbonActionButtonMetadata, Sungero.Metadata",
+        "NameGuid": "defc3ca4-8cac-48ad-9dcf-e8ab4985810a",
+        "Name": "ActionButton",
+        "ActionGuid": "8a0bb543-c6b0-4cb8-9aa4-7e51b407a7dc",
+        "ButtonSize": "Large",
+        "Index": 1,
+        "ParentGuid": "2ed94346-ba89-4c52-9815-d18010d3a2ae"
+      }
+    ],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "23cd2d28-86bd-4993-ac2d-dc6a4043ee95",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "DocumentMetadata",
+      "Number": 2
+    },
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

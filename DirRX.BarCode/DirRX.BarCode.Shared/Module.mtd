@@ -1,0 +1,57 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "45c11575-8133-485a-9c55-9b60ba7f468d",
+  "Name": "BarCode",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.BarCode.Client",
+  "ClientBaseAssemblyName": "DirRX.BarCode.ClientBase",
+  "ClientBaseNamespace": "DirRX.BarCode.ClientBase",
+  "ClientNamespace": "DirRX.BarCode.Client",
+  "Code": "BarCode",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "3272c98c-2b9e-4e08-8dbb-2b89699529a5",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "5cc7af25-4b16-419b-b109-6d68a8c30044",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "e50bcca9-c8f6-41f4-9ba7-5ea64e241647",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "DesktopViews": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.BarCode",
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.BarCode",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "DirRX.BarCode.Server",
+  "ServerNamespace": "DirRX.BarCode.Server",
+  "SharedAssemblyName": "DirRX.BarCode.Shared",
+  "SharedNamespace": "DirRX.BarCode.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

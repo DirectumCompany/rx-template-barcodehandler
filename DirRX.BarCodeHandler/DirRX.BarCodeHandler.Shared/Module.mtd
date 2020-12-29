@@ -1,0 +1,126 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "a58b90b5-d63b-4128-a102-308538aa41e6",
+  "Name": "BarCodeHandler",
+  "AsyncHandlers": [
+    {
+      "NameGuid": "15d5c485-b3c6-428c-89da-f9db15f9a818",
+      "Name": "AddBarcodeToDocument",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "220773cd-8fac-4b8a-acb6-5a4d0e3594e8",
+          "Name": "VersionId",
+          "ParameterType": "Integer"
+        },
+        {
+          "NameGuid": "223469f4-1232-4fc3-9147-a749ddf27920",
+          "Name": "DocumentId",
+          "ParameterType": "Integer"
+        }
+      ]
+    }
+  ],
+  "ClientAssemblyName": "DirRX.BarCodeHandler.Client",
+  "ClientBaseAssemblyName": "DirRX.BarCodeHandler.ClientBase",
+  "ClientBaseNamespace": "DirRX.BarCodeHandler.ClientBase",
+  "ClientNamespace": "DirRX.BarCodeHandler.Client",
+  "Code": "BarCod1",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "a4db6137-d461-4ff4-97e0-2af271c9fe76",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "74af55d5-d938-4d3e-976e-e9d49c191f54",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "64def481-34aa-4503-976d-f51914c3dcfd",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "Dependencies": [
+    {
+      "Id": "45c11575-8133-485a-9c55-9b60ba7f468d",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "df83a2ea-8d43-4ec4-a34a-2e61863014df",
+      "MaxVersion": "",
+      "MinVersion": "3.5.23.1"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.BarCodeHandler",
+  "IsVisible": false,
+  "Libraries": [
+    {
+      "NameGuid": "aafd6afa-fbc9-4eff-8dfc-e55b8554d6e2",
+      "Name": "AsposeExtension",
+      "Scope": "Both"
+    }
+  ],
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "CheckIfExtensionIsSupported",
+      "Parameters": [
+        {
+          "Name": "extension",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "ExecuteAsyncAddBarCode",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.BarCodeHandler",
+  "ResourcesKeys": [
+    "CloseDocumentAndOpenLater"
+  ],
+  "ServerAssemblyName": "DirRX.BarCodeHandler.Server",
+  "ServerNamespace": "DirRX.BarCodeHandler.Server",
+  "SharedAssemblyName": "DirRX.BarCodeHandler.Shared",
+  "SharedNamespace": "DirRX.BarCodeHandler.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}
