@@ -4,6 +4,7 @@ using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
 using Sungero.AsposeExtensions;
+using Aspose.Pdf;
 
 namespace DirRX.BarCodeHandler.Server
 {
