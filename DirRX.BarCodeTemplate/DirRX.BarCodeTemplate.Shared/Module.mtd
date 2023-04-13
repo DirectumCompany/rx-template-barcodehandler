@@ -34,6 +34,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.BarCodeTemplate",
+  "IsolatedAssemblyName": "DirRX.BarCodeTemplate.Isolated",
+  "IsolatedNamespace": "DirRX.BarCodeTemplate.Isolated",
   "OrderedSpecialFolders": [],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",

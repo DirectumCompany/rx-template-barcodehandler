@@ -61,6 +61,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.BarCodeHandler",
+  "IsolatedAssemblyName": "DirRX.BarCodeHandler.Isolated",
+  "IsolatedNamespace": "DirRX.BarCodeHandler.Isolated",
   "IsVisible": false,
   "Libraries": [
     {
