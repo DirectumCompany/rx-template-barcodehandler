@@ -41,7 +41,8 @@
     "Header": {
       "NameGuid": "64def481-34aa-4503-976d-f51914c3dcfd",
       "BackgroundPosition": "Stretch"
-    }
+    },
+    "Tabs": []
   },
   "Dependencies": [
     {
@@ -60,6 +61,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.BarCodeHandler",
+  "IsolatedAssemblyName": "DirRX.BarCodeHandler.Isolated",
+  "IsolatedNamespace": "DirRX.BarCodeHandler.Isolated",
   "IsVisible": false,
   "Libraries": [
     {
@@ -116,7 +119,7 @@
   "Versions": [
     {
       "Type": "ModuleMetadata",
-      "Number": 6
+      "Number": 8
     },
     {
       "Type": "DomainApi",
