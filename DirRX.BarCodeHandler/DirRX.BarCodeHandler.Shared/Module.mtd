@@ -11,14 +11,14 @@
       "IsHandlerGenerated": true,
       "Parameters": [
         {
-          "NameGuid": "220773cd-8fac-4b8a-acb6-5a4d0e3594e8",
+          "NameGuid": "a9a7fb05-ea61-4909-b7f4-1e4fcdd25ad9",
           "Name": "VersionId",
-          "ParameterType": "Integer"
+          "ParameterType": "LongInteger"
         },
         {
-          "NameGuid": "223469f4-1232-4fc3-9147-a749ddf27920",
+          "NameGuid": "cae7a4f7-b059-43cd-8533-9bb1958cdae8",
           "Name": "DocumentId",
-          "ParameterType": "Integer"
+          "ParameterType": "LongInteger"
         }
       ]
     }
@@ -61,16 +61,36 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.BarCodeHandler",
-  "IsolatedAssemblyName": "DirRX.BarCodeHandler.Isolated",
-  "IsolatedNamespace": "DirRX.BarCodeHandler.Isolated",
-  "IsVisible": false,
-  "Libraries": [
+  "IsolatedAreas": [
     {
-      "NameGuid": "aafd6afa-fbc9-4eff-8dfc-e55b8554d6e2",
-      "Name": "AsposeExtension",
-      "Scope": "Both"
+      "NameGuid": "13a721fc-9ee1-404c-903c-50bd6cce745e",
+      "Name": "GeneratePublicBodyWithBarCode"
     }
   ],
+  "IsolatedAssemblyName": "DirRX.BarCodeHandler.Isolated",
+  "IsolatedFunctions": [
+    {
+      "NameGuid": "be98977e-682a-4e81-9ec7-6879e8c04d40",
+      "Name": "SetStampForPdf",
+      "IsolatedAreaId": "13a721fc-9ee1-404c-903c-50bd6cce745e",
+      "Parameters": [
+        {
+          "Name": "pdfDocumentStream",
+          "ParameterType": "global::System.IO.Stream",
+          "ParameterTypeFullName": "System.IO.Stream"
+        },
+        {
+          "Name": "barCodePdf",
+          "ParameterType": "global::System.IO.Stream",
+          "ParameterTypeFullName": "System.IO.Stream"
+        }
+      ],
+      "ReturnType": "global::System.IO.Stream",
+      "ReturnTypeFullName": "System.IO.Stream"
+    }
+  ],
+  "IsolatedNamespace": "DirRX.BarCodeHandler.Isolated",
+  "IsVisible": false,
   "Overridden": [
     "IsVisible"
   ],

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
-using Sungero.AsposeExtensions;
 
 
 namespace DirRX.BarCodeHandler.Server
@@ -13,8 +12,8 @@ namespace DirRX.BarCodeHandler.Server
 
     public virtual void AddBarcodeToDocument(DirRX.BarCodeHandler.Server.AsyncHandlerInvokeArgs.AddBarcodeToDocumentInvokeArgs args)
     {
-      int documentId = args.DocumentId;
-      int versionId = args.VersionId;
+      long documentId = args.DocumentId;
+      long versionId = args.VersionId;
       
       Logger.DebugFormat("AddBarcodeToDocument: start add barcode to pdf. Document id - {0}.", documentId);
       

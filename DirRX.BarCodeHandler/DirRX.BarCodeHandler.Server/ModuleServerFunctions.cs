@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
-using Sungero.AsposeExtensions;
-using Aspose.Pdf;
 
 namespace DirRX.BarCodeHandler.Server
 {
@@ -31,7 +29,7 @@ namespace DirRX.BarCodeHandler.Server
     /// <param name="document">Документ для преобразования.</param>
     /// <param name="versionId">Id версии, для генерации.</param>
     /// <returns>Информация о результате генерации PublicBody для версии документа.</returns>
-    public virtual Structures.Module.СonversionToPdfResult GeneratePublicBodyWithBarCode(Sungero.Docflow.IOfficialDocument document, int versionId)
+    public virtual Structures.Module.СonversionToPdfResult GeneratePublicBodyWithBarCode(Sungero.Docflow.IOfficialDocument document, long versionId)
     {
       var info = Structures.Module.СonversionToPdfResult.Create();
       info.HasErrors = true;
@@ -49,28 +47,16 @@ namespace DirRX.BarCodeHandler.Server
         version.Body.Read().CopyTo(inputStream);
         try
         {
-          var pdfConverter = new Sungero.AsposeExtensions.Converter();
           var extension = version.BodyAssociatedApplication.Extension;
-          pdfDocumentStream = pdfConverter.GeneratePdf(inputStream, extension);
+          pdfDocumentStream = Sungero.Docflow.IsolatedFunctions.PdfConverter.GeneratePdf(inputStream, extension);
           
-          var barCodePdf = pdfConverter.GeneratePdf(GetBarCode(document), GetBarCodeExtension());
-          
-          var stamp = GetPdfPageStamp(new Aspose.Pdf.PdfPageStamp(barCodePdf, 1));
-          
-          var pdfDocument = new Aspose.Pdf.Document(pdfDocumentStream);
-          
-          var pagesNumbers = GetPagesNumbers(pdfDocument);
+          var barCodePdf = Sungero.Docflow.IsolatedFunctions.PdfConverter.GeneratePdf(GetBarCode(document), GetBarCodeExtension());
 
-          if (pagesNumbers == null)
-            pdfDocument = pdfConverter.AddStampToDocument(pdfDocument, stamp);
-          else
-            pdfDocument = pdfConverter.AddStampToDocument(pdfDocument, stamp, pagesNumbers);
-
-          pdfDocument.Save(pdfDocumentStream);
+          pdfDocumentStream = IsolatedFunctions.GeneratePublicBodyWithBarCode.SetStampForPdf(pdfDocumentStream, barCodePdf);
         }
         catch (Exception e)
         {
-          if (e is Sungero.AsposeExtensions.PdfConvertException)
+          if (e is AppliedCodeException)
             Logger.Error(Sungero.Docflow.Resources.PdfConvertErrorFormat(document.Id), e.InnerException);
           else
             Logger.Error(string.Format("{0} {1}", Sungero.Docflow.Resources.PdfConvertErrorFormat(document.Id), e.Message));
@@ -130,37 +116,6 @@ namespace DirRX.BarCodeHandler.Server
     public virtual string GetBarCodeExtension()
     {
       return "png";
-    }
-    
-    /// <summary>
-    /// Получить номера страниц, на которых будет проставлен штамп.
-    /// Если возвращает null, то проставляется на все страницы.
-    /// </summary>
-    /// <returns>Номера страниц.</returns>
-    public virtual int[] GetPagesNumbers(Aspose.Pdf.Document document)
-    {
-      return null;
-    }
-    
-    /// <summary>
-    /// Изменение настроек для простановки штампа на странице.
-    /// По умолчанию располагается снизу и слева.
-    /// XIndent - горизонтальная координата штампа, начиная слева.
-    /// YIndent - вертикальная координата штампа, начиная снизу.
-    /// Height - высота штампа на странице.
-    /// Width - ширина штампа на странице.
-    /// Подробная информация о настройках https://apireference.aspose.com/pdf/net/aspose.pdf/stamp.
-    /// </summary>
-    /// <param name="stamp">Штрихкод в виде объекта PdfPageStamp.</param>
-    /// <returns>Штрихкод с установленными параметрами.</returns>
-    public virtual Aspose.Pdf.PdfPageStamp GetPdfPageStamp(Aspose.Pdf.PdfPageStamp stamp)
-    {
-      stamp.XIndent = 0;
-      stamp.YIndent = -50;
-      stamp.Height = 120;
-      stamp.Width = 180;
-      
-      return stamp;
     }
     
     #endregion
