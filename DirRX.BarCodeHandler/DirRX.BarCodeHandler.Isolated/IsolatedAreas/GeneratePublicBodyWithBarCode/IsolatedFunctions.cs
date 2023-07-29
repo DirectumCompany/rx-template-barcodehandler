@@ -13,10 +13,10 @@ namespace DirRX.BarCodeHandler.Isolated.GeneratePublicBodyWithBarCode
   {
 
     /// <summary>
-    /// Добавить штамп в Pdf версию документа.
+    /// Р”РѕР±Р°РІРёС‚СЊ С€С‚Р°РјРї РІ Pdf РІРµСЂСЃРёСЋ РґРѕРєСѓРјРµРЅС‚Р°.
     /// </summary>
-    /// <param name="pdfDocumentStream">Версия документа в формате PDF.</param>
-    /// <param name="barCodePdf">Штрихкод.</param>
+    /// <param name="pdfDocumentStream">Р’РµСЂСЃРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РІ С„РѕСЂРјР°С‚Рµ PDF.</param>
+    /// <param name="barCodePdf">РЁС‚СЂРёС…РєРѕРґ.</param>
     [Public]
     public virtual Stream SetStampForPdf(Stream pdfDocumentStream, Stream barCodePdf)
     {
@@ -41,9 +41,9 @@ namespace DirRX.BarCodeHandler.Isolated.GeneratePublicBodyWithBarCode
     }
     
     /// <summary>
-    /// Создать экземпляр класса для простановки штампов.
+    /// РЎРѕР·РґР°С‚СЊ СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° РґР»СЏ РїСЂРѕСЃС‚Р°РЅРѕРІРєРё С€С‚Р°РјРїРѕРІ.
     /// </summary>
-    /// <returns>Экземпляр PdfStamper.</returns>
+    /// <returns>Р­РєР·РµРјРїР»СЏСЂ PdfStamper.</returns>
     public virtual PdfStamper CreatePdfStamper()
     {
       return new PdfStamper();
