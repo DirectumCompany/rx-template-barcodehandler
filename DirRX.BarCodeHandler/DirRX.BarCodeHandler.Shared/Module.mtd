@@ -127,7 +127,8 @@
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "DirRX.BarCodeHandler",
   "ResourcesKeys": [
-    "CloseDocumentAndOpenLater"
+    "CloseDocumentAndOpenLater",
+    "DocumentBodyNeedsRepair"
   ],
   "ServerAssemblyName": "DirRX.BarCodeHandler.Server",
   "ServerNamespace": "DirRX.BarCodeHandler.Server",
