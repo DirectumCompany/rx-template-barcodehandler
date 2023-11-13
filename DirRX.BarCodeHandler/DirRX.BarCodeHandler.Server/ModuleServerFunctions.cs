@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -63,7 +63,7 @@ namespace DirRX.BarCodeHandler.Server
           
           info.HasConvertionError = true;
           info.HasLockError = false;
-          info.ErrorMessage = Sungero.Docflow.Resources.DocumentBodyNeedsRepair;
+          info.ErrorMessage = DirRX.BarCodeHandler.Resources.DocumentBodyNeedsRepair;
         }
       }
       
