@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace DirRX.BarCodeHandler.Shared
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {    
     /// <summary>
     /// Проверить, поддерживается ли формат файла по его расширению.

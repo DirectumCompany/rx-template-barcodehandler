@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace DirRX.BarCodeHandler.Server
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
     /// <summary>
     /// Вызов обработчика для вставки штрихкода в документ.

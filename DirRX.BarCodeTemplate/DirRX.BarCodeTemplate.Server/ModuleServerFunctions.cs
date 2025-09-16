@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace DirRX.BarCodeTemplate.Server
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
 
   }
