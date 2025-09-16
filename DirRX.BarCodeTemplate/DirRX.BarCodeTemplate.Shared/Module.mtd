@@ -31,7 +31,6 @@
       "ItemId": "b8daa59a-882e-4338-99c0-0508cce74f6b"
     }
   ],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.BarCodeTemplate",
@@ -41,7 +40,6 @@
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "DirRX.BarCodeTemplate",
-  "ResourcesKeys": [],
   "ServerAssemblyName": "DirRX.BarCodeTemplate.Server",
   "ServerNamespace": "DirRX.BarCodeTemplate.Server",
   "SharedAssemblyName": "DirRX.BarCodeTemplate.Shared",
@@ -52,11 +50,11 @@
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",

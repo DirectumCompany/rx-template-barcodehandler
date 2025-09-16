@@ -58,7 +58,6 @@
       "MinVersion": "3.5.23.1"
     }
   ],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.BarCodeHandler",
@@ -141,7 +140,7 @@
   "Versions": [
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",

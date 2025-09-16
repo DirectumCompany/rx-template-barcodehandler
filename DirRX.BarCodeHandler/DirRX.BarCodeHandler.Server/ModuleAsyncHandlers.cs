@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -7,7 +7,7 @@ using Sungero.CoreEntities;
 
 namespace DirRX.BarCodeHandler.Server
 {
-  public class ModuleAsyncHandlers
+  public partial class ModuleAsyncHandlers
   {
 
     public virtual void AddBarcodeToDocument(DirRX.BarCodeHandler.Server.AsyncHandlerInvokeArgs.AddBarcodeToDocumentInvokeArgs args)

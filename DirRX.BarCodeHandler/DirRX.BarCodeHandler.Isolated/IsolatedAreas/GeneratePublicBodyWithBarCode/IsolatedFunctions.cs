@@ -9,7 +9,7 @@ using Aspose.Pdf;
 
 namespace DirRX.BarCodeHandler.Isolated.GeneratePublicBodyWithBarCode
 {
-  public class IsolatedFunctions
+  public partial class IsolatedFunctions
   {
 
     /// <summary>
