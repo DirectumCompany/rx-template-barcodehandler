@@ -31,16 +31,22 @@
 5.	Добавление новых форматов документов.
 
 ## Порядок установки
-Для работы требуется установленный Directum RX версии 3.5 и выше.
+Для работы требуется установленный Directum RX версии 4.1 и выше.
 
 ## Установка для ознакомления
 1. Склонировать репозиторий с rx-template-barcodehandler в папку.
-2. Указать в _ConfigSettings.xml DDS:
-<block name="REPOSITORIES">
-  <repository folderName="Base" solutionType="Base" url="" /> 
-  <repository folderName="<Папка из п.1>" solutionType="Work" 
-     url="https://github.com/DirectumCompany/rx-template-barcodehandler " />
-</block>
+2. Указать в config.yml в разделе DevelopmentStudio:
+```xml
+   GIT_ROOT_DIRECTORY: '<Папка из п.1>'
+   REPOSITORIES:
+      repository:
+      -   '@folderName': 'work'
+          '@solutionType': 'Work'
+          '@url': https://github.com/DirectumCompany/rx-template-barcodehandler.git'
+      -   '@folderName': 'base'
+          '@solutionType': 'Base'
+          '@url': ''
+```
 
 ## Установка для использования на проекте
 Возможные варианты
@@ -48,24 +54,37 @@
 ### A. Fork репозитория.
 1. Сделать fork репозитория rx-template-barcodehandler для своей учетной записи.
 2. Склонировать созданный в п. 1 репозиторий в папку.
-3. Указать в _ConfigSettings.xml DDS:
-<block name="REPOSITORIES">
-  <repository folderName="Base" solutionType="Base" url="" /> 
-  <repository folderName="<Папка из п.2>" solutionType="Work" 
-     url="<Адрес репозитория gitHub учетной записи пользователя из п. 1>" />
-</block>
+3. Указать в config.yml в разделе DevelopmentStudio:
+```xml
+   GIT_ROOT_DIRECTORY: '<Папка из п.2>'
+   REPOSITORIES:
+      repository:
+      -   '@folderName': 'work'
+          '@solutionType': 'Work'
+          '@url': https://github.com/DirectumCompany/rx-template-barcodehandler.git'
+      -   '@folderName': 'base'
+          '@solutionType': 'Base'
+          '@url': ''
+```
 
 ### B. Подключение на базовый слой.
 Вариант не рекомендуется, так как при выходе версии шаблона разработки не гарантируется обратная совместимость.
 1. Склонировать репозиторий rx-template-barcodehandler в папку.
-2. Указать в _ConfigSettings.xml DDS:
-<block name="REPOSITORIES">
-  <repository folderName="Base" solutionType="Base" url="" /> 
-  <repository folderName="<Папка из п.1>" solutionType="Base" 
-     url="https://github.com/DirectumCompany/rx-template-barcodehandler " />
-  <repository folderName="<Папка для рабочего слоя>" solutionType="Work" 
-     url ="<Адрес репозитория для рабочего слоя>" />
-</block>
+2. Указать в config.yml в разделе DevelopmentStudio:
+```xml
+   GIT_ROOT_DIRECTORY: '<Папка из п.1>'
+   REPOSITORIES:
+      repository:
+      -   '@folderName': 'work'
+          '@solutionType': 'Work'
+          '@url': '<Адрес репозитория для рабочего слоя>'
+      -   '@folderName': 'base'
+          '@solutionType': 'Base'
+          '@url': ''
+      -   '@folderName': 'base'
+          '@solutionType': 'Base'
+          '@url': 'https://github.com/DirectumCompany/rx-template-barcodehandler.git'
+```
 
 ### C. Копирование репозитория в систему контроля версий.
 Рекомендуемый вариант для проектов внедрения.
@@ -74,4 +93,5 @@
 3. Перейти в папку из п. 2.
 4. Импортировать клонированный репозиторий в систему контроля версий командой:
 git push –mirror <Адрес репозитория из п. 1>
+
 
